@@ -1,3 +1,4 @@
+$text-color: #2C3E50;
 $color-1: #FFC12D;
 $color-2: #F9B718;
 $color-3: #2C3E50;
@@ -15,6 +16,22 @@ $color-14: #0787D4;
 $color-15: #A39CDC;
 $color-16: #8781BD;
 $color-17: #5B568E;
+$bg-color1: #FFC12D;
+$bg-color2: #A7EC2F;
+$bg-color3: #FEB1A4;
+$bg-color4: #85EBFA;
+$bg-color5: #AACDF6;
+$bnt-color1: #B18009;
+$bnt-color2: #558502;
+$bnt-color3: #D52E13;
+$bnt-color4: #0787D4;
+$bnt-color5: #5B568E;
+$border-color: #E2E6E7;
+$border-color1: #C89210;
+$border-color2: #7BC200;
+$border-color3: #F55C43;
+$border-color4: #47B4F6;
+$border-color5: #8781BD;
 
 
 
@@ -35,13 +52,14 @@ body{
     flex-wrap: wrap;
     
     .notification{
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        width: 571px;
-        margin-top: 40px;
-        border: 1px solid #E2E6E7;
-        border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 570px;
+    height: 149px;
+    margin-top: 39px;
+    background-color: #FFC12D;
+    border-radius: 10px;
         
         div{
             width: 335px;
@@ -59,7 +77,7 @@ body{
             width: 50px;
             height: 50px;
             background-color: $color-1;
-            border: 7px solid $color-2;
+            border: 7px solid $border-color1;
             color: $color-5;
             border-radius: 50%;
             margin: 40px 0px 40px 49px;
@@ -78,7 +96,7 @@ body{
             font-family: 'Lato';
             font-size: 14px;
             line-height: 24px;
-            color: $color-4;
+            color: $text-color;
             margin-top: 6px;
             margin-left: -10px;
         }
@@ -89,57 +107,72 @@ body{
             top: 16px;
             right: 19px;
             font-size: 14px;
-            color: #CFD2D3;
+            color: $bnt-color1;
         }
         &.success{
             margin-left: 29px;
+            background-color: $bg-color2; 
 
             &:before{
                 content: '\f00c';
                 color: $color-6;
                 background-color: $color-7;
-                border: 7px solid $color-8;
+                border: 7px solid $border-color2;
             }
+        }
+        &::after{
+            color: $bnt-color2;
         }
         &.error{
             margin-top: 31px;
+            background-color: $bg-color3;
 
             &::before{
                 content: '\f00d';
                 color: $color-11;
-                background-color: $color-9;
+                background-color: $bg-color3;
                 border: 7px solid $color-10;
                 margin-top: 40px;
+            }
+            &::after{
+                    color: $bnt-color3;
             }
         }
         &.flash{
             margin-left: 29px;
             margin-top: 31px;
+            background-color: $bg-color4;
             &::before{
                 content: '\f0e7';
                 color: $color-14;
-                background-color: $color-12;
+                background-color: $bg-color4;
                 border: 7px solid $color-13;
                 margin-top: 42px;
+            }
+
+            &::after{
+                color: $bnt-color4;
             }
         }
         &.info{
             width: 1170px;
             margin-top: 31px;
+            background-color: $bg-color5;
 
             &::before{
                 content: '\f129';
                 color: $color-17;
-                background-color: $color-15;
-                border: 7px solid $color-16;
+                background-color: $bg-color5;
+                border: 7px solid $bnt-color5;
             }
             &::after{
                 top: 15px;
                 right: 18px;
+                color: $border-color5;
             }
         }
         .info-text{
-            width: 988px;
+            width: 922px;
         }
     }
     
