@@ -3,14 +3,25 @@ $color-2: #F9B718;
 $color-3: #2C3E50;
 $color-4: #A1B1BC;
 $color-5: #A47503;
-
+$color-6: #558502;
+$color-7: #97E411;
+$color-8: #7BC200;
+$color-9: #FD7761;
+$color-10: #F55C43;
+$color-11: #D52E13;
+$color-12: #6FD9FC;
+$color-13: #47B4F6;
+$color-14: #0787D4;
+$color-15: #A39CDC;
+$color-16: #8781BD;
+$color-17: #5B568E;
 
 
 
 *{
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
 }
 body{
     -moz-osx-font-smoothing: grayscale;
@@ -19,6 +30,9 @@ body{
 .container{
     width: 1200px;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     
     .notification{
         position: relative;
@@ -34,7 +48,7 @@ body{
             margin: 40px 0px 34px 40px;
         }
         
-        &:before{
+        &::before{
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -68,7 +82,7 @@ body{
             margin-top: 6px;
             margin-left: -10px;
         }
-        &:after{
+        &::after{
             content: '\f00d';
             font-family:fontawesome;
             position: absolute;
@@ -77,5 +91,56 @@ body{
             font-size: 14px;
             color: #CFD2D3;
         }
+        &.success{
+            margin-left: 29px;
+
+            &:before{
+                content: '\f00c';
+                color: $color-6;
+                background-color: $color-7;
+                border: 7px solid $color-8;
+            }
+        }
+        &.error{
+            margin-top: 31px;
+
+            &::before{
+                content: '\f00d';
+                color: $color-11;
+                background-color: $color-9;
+                border: 7px solid $color-10;
+                margin-top: 40px;
+            }
+        }
+        &.flash{
+            margin-left: 29px;
+            margin-top: 31px;
+            &::before{
+                content: '\f0e7';
+                color: $color-14;
+                background-color: $color-12;
+                border: 7px solid $color-13;
+                margin-top: 42px;
+            }
+        }
+        &.info{
+            width: 1170px;
+            margin-top: 31px;
+
+            &::before{
+                content: '\f129';
+                color: $color-17;
+                background-color: $color-15;
+                border: 7px solid $color-16;
+            }
+            &::after{
+                top: 15px;
+                right: 18px;
+            }
+        }
+        .info-text{
+            width: 988px;
+        }
     }
+    
 }
