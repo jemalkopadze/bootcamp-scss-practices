@@ -60,10 +60,11 @@ body{
     margin-top: 39px;
     background-color: #FFC12D;
     border-radius: 10px;
+    padding-top: 43px;
+    padding-left: 49px;
         
         div{
             width: 335px;
-            margin: 40px 0px 34px 40px;
         }
         
         &::before{
@@ -80,7 +81,7 @@ body{
             border: 7px solid $border-color1;
             color: $color-5;
             border-radius: 50%;
-            margin: 40px 0px 40px 49px;
+            margin-right: 40px;
         }
         h3{
             font-family: 'Lato';
@@ -100,14 +101,18 @@ body{
             margin-top: 6px;
             margin-left: -10px;
         }
-        &::after{
-            content: '\f00d';
-            font-family:fontawesome;
-            position: absolute;
-            top: 16px;
-            right: 19px;
-            font-size: 14px;
-            color: $bnt-color1;
+        a{
+
+            &::after{
+                content: '\f00d';
+                font-family:fontawesome;
+                position: absolute;
+                top: 19px;
+                right: 19px;
+                font-size: 14px;
+                color: $bnt-color1;
+            }
+
         }
         &.success{
             margin-left: 29px;
@@ -119,9 +124,13 @@ body{
                 background-color: $color-7;
                 border: 7px solid $border-color2;
             }
+
+                    a{
+
+            &::after{
+                color: $bnt-color2;
+            }
         }
-        &::after{
-            color: $bnt-color2;
         }
         &.error{
             margin-top: 31px;
@@ -132,27 +141,32 @@ body{
                 color: $color-11;
                 background-color: $bg-color3;
                 border: 7px solid $color-10;
-                margin-top: 40px;
             }
+        a{
             &::after{
-                    color: $bnt-color3;
-            }
+                color: $bnt-color3;
+            }   
+        }
+
         }
         &.flash{
             margin-left: 29px;
             margin-top: 31px;
             background-color: $bg-color4;
+
             &::before{
                 content: '\f0e7';
                 color: $color-14;
                 background-color: $bg-color4;
                 border: 7px solid $color-13;
-                margin-top: 42px;
             }
-
+        a{
+            
             &::after{
                 color: $bnt-color4;
             }
+        }
+
         }
         &.info{
             width: 1170px;
@@ -165,11 +179,11 @@ body{
                 background-color: $bg-color5;
                 border: 7px solid $bnt-color5;
             }
+        a{
             &::after{
-                top: 15px;
-                right: 18px;
-                color: $border-color5;
+                color: $bnt-color5;
             }
+        }
         }
         .info-text{
             width: 922px;
