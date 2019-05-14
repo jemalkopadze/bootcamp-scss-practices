@@ -1,0 +1,144 @@
+
+.notification {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 570px;
+    height: 149px;
+    margin-top: 39px;
+    padding-top: 43px;
+    padding-left: 49px;
+    border-radius: 10px;
+    background-color: #FFC12D;
+
+    div {
+        width: 335px;
+    }
+
+    &::before {
+        content: '\f12a';
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        margin-right: 40px;
+        border: 7px solid $border-color1;
+        border-radius: 50%;
+        background-color: $color-1;
+        color: $color-5;
+        font-family: fontawesome;
+        font-size: 24px;
+    }
+    h3 {
+        margin-top: -7px;
+        margin-left: -11px;
+        color: $color-3;
+        font-family: 'Lato';
+        font-size: 14px;
+        font-weight: 900;
+        letter-spacing: 1.36px;
+        line-height: 26px;
+    }
+
+    p {
+        margin-top: 6px;
+        margin-left: -10px;
+        color: $text-color;
+        font-family: 'Lato';
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    a {
+
+        &::after {
+            content: '\f00d';
+            position: absolute;
+            top: 19px;
+            right: 19px;
+            color: $bnt-color1;
+            font-family: fontawesome;
+            font-size: 14px;
+        }
+
+    }
+
+    &.success {
+        margin-left: 29px;
+        background-color: $bg-color2;
+
+
+        &:before {
+            content: '\f00c';
+            border: 7px solid $border-color2;
+            background-color: $color-7;
+            color: $color-6;
+        }
+
+        a {
+
+        &::after {
+            color: $bnt-color2;
+        }
+    }
+    }
+    &.error {
+        margin-top: 31px;
+        background-color: $bg-color3;
+
+        &::before {
+            content: '\f00d';
+            border: 7px solid $color-10;
+            background-color: $bg-color3;
+            color: $color-11;
+        }
+    a {
+        &::after {
+            color: $bnt-color3;
+        }   
+}
+
+    }
+    &.flash {
+        margin-top: 31px;
+        margin-left: 29px;
+        background-color: $bg-color4;
+
+        &::before {
+            content: '\f0e7';
+            border: 7px solid $color-13;
+            background-color: $bg-color4;
+            color: $color-14;
+        }
+    a {
+        
+        &::after {
+            color: $bnt-color4;
+        }
+    }
+
+    }
+    &.info {
+        width: 1170px;
+        margin-top: 31px;
+        background-color: $bg-color5;
+
+        &::before {
+            content: '\f129';
+            border: 7px solid $bnt-color5;
+            background-color: $bg-color5;
+            color: $color-17;
+        }
+        a {
+            &::after {
+            color: $bnt-color5;
+        }
+    }
+}
+
+    .info-text {
+        width: 922px;
+    }
+}
