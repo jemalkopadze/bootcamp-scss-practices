@@ -33,161 +33,164 @@ $border-color3: #F55C43;
 $border-color4: #47B4F6;
 $border-color5: #8781BD;
 
-
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
-.container{
-    width: 1200px;
-    margin: auto;
+
+.container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
-    .notification{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 570px;
-    height: 149px;
-    margin-top: 39px;
-    background-color: #FFC12D;
-    border-radius: 10px;
-    padding-top: 43px;
-    padding-left: 49px;
-        
-        div{
+    width: 1200px;
+    margin: auto;
+
+    .notification {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        width: 570px;
+        height: 149px;
+        margin-top: 39px;
+        padding-top: 43px;
+        padding-left: 49px;
+        border-radius: 10px;
+        background-color: #FFC12D;
+
+        div {
             width: 335px;
         }
-        
-        &::before{
+
+        &::before {
+            content: '\f12a';
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            content:'\f12a';
-            font-family:fontawesome;
-            font-size: 24px;
             width: 50px;
             height: 50px;
-            background-color: $color-1;
-            border: 7px solid $border-color1;
-            color: $color-5;
-            border-radius: 50%;
             margin-right: 40px;
+            border: 7px solid $border-color1;
+            border-radius: 50%;
+            background-color: $color-1;
+            color: $color-5;
+            font-family: fontawesome;
+            font-size: 24px;
         }
-        h3{
-            font-family: 'Lato';
-            font-weight: 900;
-            font-size: 14px;
-            line-height: 26px;
-            color: $color-3;
+        h3 {
             margin-top: -7px;
             margin-left: -11px;
+            color: $color-3;
+            font-family: 'Lato';
+            font-size: 14px;
+            font-weight: 900;
             letter-spacing: 1.36px;
+            line-height: 26px;
         }
-        p{
+
+        p {
+            margin-top: 6px;
+            margin-left: -10px;
+            color: $text-color;
             font-family: 'Lato';
             font-size: 14px;
             line-height: 24px;
-            color: $text-color;
-            margin-top: 6px;
-            margin-left: -10px;
         }
-        a{
 
-            &::after{
+        a {
+
+            &::after {
                 content: '\f00d';
-                font-family:fontawesome;
                 position: absolute;
                 top: 19px;
                 right: 19px;
-                font-size: 14px;
                 color: $bnt-color1;
+                font-family: fontawesome;
+                font-size: 14px;
             }
 
         }
-        &.success{
-            margin-left: 29px;
-            background-color: $bg-color2; 
 
-            &:before{
+        &.success {
+            margin-left: 29px;
+            background-color: $bg-color2;
+
+
+            &:before {
                 content: '\f00c';
-                color: $color-6;
-                background-color: $color-7;
                 border: 7px solid $border-color2;
+                background-color: $color-7;
+                color: $color-6;
             }
 
-                    a{
+            a {
 
-            &::after{
+            &::after {
                 color: $bnt-color2;
             }
         }
         }
-        &.error{
+        &.error {
             margin-top: 31px;
             background-color: $bg-color3;
 
-            &::before{
+            &::before {
                 content: '\f00d';
-                color: $color-11;
-                background-color: $bg-color3;
                 border: 7px solid $color-10;
+                background-color: $bg-color3;
+                color: $color-11;
             }
-        a{
-            &::after{
+        a {
+            &::after {
                 color: $bnt-color3;
             }   
-        }
+    }
 
         }
-        &.flash{
-            margin-left: 29px;
+        &.flash {
             margin-top: 31px;
+            margin-left: 29px;
             background-color: $bg-color4;
 
-            &::before{
+            &::before {
                 content: '\f0e7';
-                color: $color-14;
-                background-color: $bg-color4;
                 border: 7px solid $color-13;
+                background-color: $bg-color4;
+                color: $color-14;
             }
-        a{
+        a {
             
-            &::after{
+            &::after {
                 color: $bnt-color4;
             }
         }
 
         }
-        &.info{
+        &.info {
             width: 1170px;
             margin-top: 31px;
             background-color: $bg-color5;
 
-            &::before{
+            &::before {
                 content: '\f129';
-                color: $color-17;
-                background-color: $bg-color5;
                 border: 7px solid $bnt-color5;
+                background-color: $bg-color5;
+                color: $color-17;
             }
-        a{
-            &::after{
+            a {
+                &::after {
                 color: $bnt-color5;
             }
         }
-        }
-        .info-text{
+    }
+
+        .info-text {
             width: 922px;
         }
     }
-    
 }
